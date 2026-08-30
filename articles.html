@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทความรู้ | Tiny Aquatic Encyclopedia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav scrolled">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="รูป/logo.png" alt="Logo" class="me-2 nav-logo">
+                <div>
+                    <h1 class="h5 mb-0 fw-bold text-gradient">สารานุกรมสัตว์น้ำจิ๋ว</h1>
+                    <small class="text-muted d-block" style="font-size: 0.75rem;">Tiny Aquatic Encyclopedia</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fw-medium">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="animals.html">สัตว์น้ำจิ๋ว</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">คลังภาพ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="articles.html">บทความรู้</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trivia.html">เกร็ดความรู้</a></li>
+                    <li class="nav-item"><a class="nav-link" href="importance.html">ความสำคัญ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container" style="margin-top: 120px;">
+        <!-- Breadcrumb & Search -->
+        <div class="row align-items-end mb-4">
+            <div class="col-md-7" data-aos="fade-right">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-2">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark fw-medium"><i class="bi bi-house-door-fill fs-5 me-1 align-text-bottom"></i> หน้าแรก</a></li>
+                        <li class="breadcrumb-item active fw-medium mt-1" aria-current="page">บทความความรู้</li>
+                    </ol>
+                </nav>
+                <h2 class="fw-bold section-title mb-2 fs-1">บทความความรู้</h2>
+                <p class="text-dark mb-0 fw-light">บทความให้ความรู้เกี่ยวกับสัตว์น้ำจิ๋ว การศึกษา และเรื่องราวที่น่าสนใจ</p>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-left">
+                <div class="input-group shadow-sm rounded-pill overflow-hidden border bg-white p-1">
+                    <input type="text" class="form-control border-0 px-4 bg-transparent" style="box-shadow: none;" placeholder="ค้นหาบทความ...">
+                    <button class="btn btn-dark rounded-pill px-4" type="button"><i class="bi bi-search me-1"></i> ค้นหา</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Box -->
+        <div class="filter-box bg-white p-3 rounded-4 mb-5" data-aos="fade-up">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                <div class="d-flex flex-wrap gap-2">
+                    <button class="btn filter-btn active rounded-pill px-4">ทั้งหมด</button>
+                    <button class="btn filter-btn rounded-pill px-4">การจำแนกและลักษณะ</button>
+                    <button class="btn filter-btn rounded-pill px-4">แหล่งที่อยู่อาศัย</button>
+                    <button class="btn filter-btn rounded-pill px-4">การเพาะเลี้ยง</button>
+                    <button class="btn filter-btn rounded-pill px-4">บทบาทและความสำคัญ</button>
+                    <button class="btn filter-btn rounded-pill px-4">การศึกษาและงานวิจัย</button>
+                    <button class="btn filter-btn rounded-pill px-4">อื่นๆ</button>
+                </div>
+                <div class="d-flex align-items-center">
+                    <select class="form-select form-select-sm rounded-pill ps-3 pe-4 py-2 text-muted shadow-sm" style="width: auto;">
+                        <option selected>เรียงตาม: ล่าสุด</option>
+                        <option>เก่าสุด</option>
+                        <option>ยอดนิยม</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles List -->
+        <div class="row g-4 mb-5">
+            
+            <!-- Article 1 -->
+            <div class="col-12" data-aos="fade-up" data-aos-delay="50">
+                <div class="card article-card rounded-4 overflow-hidden bg-white h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4 col-lg-3">
+                            <img src="รูป/หน้าเเรก01.png" alt="รู้จักสัตว์น้ำจิ๋ว" class="img-fluid w-100 article-img">
+                        </div>
+                        <div class="col-md-8 col-lg-9 d-flex align-items-center">
+                            <div class="card-body p-4 w-100">
+                                <h5 class="fw-bold text-primary mb-2">รู้จักสัตว์น้ำจิ๋ว: สิ่งมีชีวิตจิ๋วที่มีความสำคัญต่อระบบนิเวศ</h5>
+                                <p class="card-text text-muted small mb-3">ทำความรู้จักกับสัตว์น้ำจิ๋วกลุ่มต่างๆ ความหลากหลาย และบทบาทสำคัญที่ช่วยรักษาสมดุลของระบบนิเวศในแหล่งน้ำ</p>
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mt-auto">
+                                    <div class="d-flex align-items-center gap-4 text-muted small">
+                                        <div><i class="bi bi-calendar3 me-1"></i> 15 พ.ค. 2567</div>
+                                        <div><i class="bi bi-tags me-1"></i> การจำแนกและลักษณะ</div>
+                                    </div>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalArticle1" class="btn read-more-btn rounded-pill px-4 py-1 mt-3 mt-md-0">อ่านเพิ่มเติม &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="card article-card rounded-4 overflow-hidden bg-white h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4 col-lg-3">
+                            <img src="รูป/หน้าเเรก02.png" alt="แหล่งที่อยู่อาศัยของสัตว์น้ำจิ๋ว" class="img-fluid w-100 article-img">
+                        </div>
+                        <div class="col-md-8 col-lg-9 d-flex align-items-center">
+                            <div class="card-body p-4 w-100">
+                                <h5 class="fw-bold text-primary mb-2">แหล่งที่อยู่อาศัยของสัตว์น้ำจิ๋ว</h5>
+                                <p class="card-text text-muted small mb-3">สำรวจแหล่งน้ำธรรมชาติและแหล่งน้ำประเภทต่างๆ ที่พบสัตว์น้ำจิ๋ว พร้อมปัจจัยที่มีผลต่อการดำรงชีวิต</p>
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mt-auto">
+                                    <div class="d-flex align-items-center gap-4 text-muted small">
+                                        <div><i class="bi bi-calendar3 me-1"></i> 10 พ.ค. 2567</div>
+                                        <div><i class="bi bi-tags me-1"></i> แหล่งที่อยู่อาศัย</div>
+                                    </div>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalArticle2" class="btn read-more-btn rounded-pill px-4 py-1 mt-3 mt-md-0">อ่านเพิ่มเติม &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="col-12" data-aos="fade-up" data-aos-delay="150">
+                <div class="card article-card rounded-4 overflow-hidden bg-white h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4 col-lg-3">
+                            <img src="รูป/หน้าเเรก03.png" alt="การเพาะเลี้ยงสัตว์น้ำจิ๋วเบื้องต้น" class="img-fluid w-100 article-img">
+                        </div>
+                        <div class="col-md-8 col-lg-9 d-flex align-items-center">
+                            <div class="card-body p-4 w-100">
+                                <h5 class="fw-bold text-primary mb-2">การเพาะเลี้ยงสัตว์น้ำจิ๋วเบื้องต้น</h5>
+                                <p class="card-text text-muted small mb-3">ขั้นตอนและเทคนิคการเพาะเลี้ยงสัตว์น้ำจิ๋ว เช่น โรติเฟอร์ และอาร์ทีเมีย เพื่อใช้เป็นอาหารเลี้ยงสัตว์น้ำ</p>
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mt-auto">
+                                    <div class="d-flex align-items-center gap-4 text-muted small">
+                                        <div><i class="bi bi-calendar3 me-1"></i> 5 พ.ค. 2567</div>
+                                        <div><i class="bi bi-tags me-1"></i> การเพาะเลี้ยง</div>
+                                    </div>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalArticle3" class="btn read-more-btn rounded-pill px-4 py-1 mt-3 mt-md-0">อ่านเพิ่มเติม &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="card article-card rounded-4 overflow-hidden bg-white h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4 col-lg-3">
+                            <img src="รูป/หน้าเเรก04.png" alt="บทบาทของสัตว์น้ำจิ๋วในห่วงโซ่อาหาร" class="img-fluid w-100 article-img">
+                        </div>
+                        <div class="col-md-8 col-lg-9 d-flex align-items-center">
+                            <div class="card-body p-4 w-100">
+                                <h5 class="fw-bold text-primary mb-2">บทบาทของสัตว์น้ำจิ๋วในห่วงโซ่อาหาร</h5>
+                                <p class="card-text text-muted small mb-3">สัตว์น้ำจิ๋วเป็นอาหารของสิ่งมีชีวิตหลายชนิด และเป็นส่วนสำคัญของห่วงโซ่อาหารในแหล่งน้ำ</p>
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mt-auto">
+                                    <div class="d-flex align-items-center gap-4 text-muted small">
+                                        <div><i class="bi bi-calendar3 me-1"></i> 1 พ.ค. 2567</div>
+                                        <div><i class="bi bi-tags me-1"></i> บทบาทและความสำคัญ</div>
+                                    </div>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalArticle4" class="btn read-more-btn rounded-pill px-4 py-1 mt-3 mt-md-0">อ่านเพิ่มเติม &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="col-12" data-aos="fade-up" data-aos-delay="250">
+                <div class="card article-card rounded-4 overflow-hidden bg-white h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4 col-lg-3">
+                            <img src="รูป/หน้าเเรก05.png" alt="การใช้กล้องจุลทรรศน์ในการศึกษาสัตว์น้ำจิ๋ว" class="img-fluid w-100 article-img">
+                        </div>
+                        <div class="col-md-8 col-lg-9 d-flex align-items-center">
+                            <div class="card-body p-4 w-100">
+                                <h5 class="fw-bold text-primary mb-2">การใช้กล้องจุลทรรศน์ในการศึกษาสัตว์น้ำจิ๋ว</h5>
+                                <p class="card-text text-muted small mb-3">แนะนำชนิดของกล้องจุลทรรศน์ การเตรียมตัวอย่าง และเทคนิคการสังเกตเพื่อให้ได้ผลการศึกษาที่ดี</p>
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mt-auto">
+                                    <div class="d-flex align-items-center gap-4 text-muted small">
+                                        <div><i class="bi bi-calendar3 me-1"></i> 28 เม.ย. 2567</div>
+                                        <div><i class="bi bi-tags me-1"></i> การศึกษาและงานวิจัย</div>
+                                    </div>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalArticle5" class="btn read-more-btn rounded-pill px-4 py-1 mt-3 mt-md-0">อ่านเพิ่มเติม &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mb-5 pb-4" data-aos="fade-up">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-white shadow-sm fw-bold" href="index.html">&lt;</a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link text-white rounded-circle me-1 border-0 bg-dark shadow-sm" href="index.html">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-white shadow-sm" href="index.html">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-white shadow-sm" href="index.html">3</a>
+                </li>
+                <li class="page-item disabled">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-transparent fw-bold" href="index.html">...</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-white shadow-sm" href="index.html">5</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link text-dark rounded-circle border-0 bg-white shadow-sm fw-bold" href="index.html">&gt;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="รูป/logo.png" alt="Logo" class="me-3 footer-logo">
+                        <div>
+                            <h4 class="text-white mb-0 fw-bold">สารานุกรมสัตว์น้ำจิ๋ว</h4>
+                            <small class="text-light opacity-75">Tiny Aquatic Encyclopedia</small>
+                        </div>
+                    </div>
+                    <p class="text-light opacity-75 small pe-lg-4">สำรวจโลกของสัตว์น้ำจิ๋วผ่านข้อมูล ภาพถ่าย และบทความความรู้จากกล้องจุลทรรศน์ เพื่อเป็นแหล่งเรียนรู้ทางชีววิทยาและนิเวศวิทยา</p>
+                    <div class="d-flex gap-2 social-links mt-3">
+                        <a href="https://facebook.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">หมวดหมู่</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="animals.html"><i class="bi bi-chevron-right me-1 small"></i> สัตว์น้ำจิ๋ว</a></li>
+                        <li><a href="gallery.html"><i class="bi bi-chevron-right me-1 small"></i> คลังภาพ</a></li>
+                        <li><a href="articles.html"><i class="bi bi-chevron-right me-1 small"></i> บทความรู้</a></li>
+                        <li><a href="trivia.html"><i class="bi bi-chevron-right me-1 small"></i> เกร็ดความรู้</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">ลิงก์ที่เกี่ยวข้อง</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="importance.html"><i class="bi bi-chevron-right me-1 small"></i> ความสำคัญในระบบนิเวศ</a></li>
+                        <li><a href="index.html#recommended"><i class="bi bi-chevron-right me-1 small"></i> สัตว์น้ำจิ๋วแนะนำ</a></li>
+                        <li><a href="index.html#news"><i class="bi bi-chevron-right me-1 small"></i> ข่าวสารและกิจกรรม</a></li>
+                        <li><a href="index.html"><i class="bi bi-chevron-right me-1 small"></i> กลับสู่หน้าแรก</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">ติดต่อเรา</h5>
+                    <ul class="list-unstyled text-light opacity-75 small contact-info">
+                        <li class="mb-3 d-flex"><i class="bi bi-envelope-fill me-3 mt-1 fs-5 text-info"></i> <span>microaqua@example.com</span></li>
+                        <li class="mb-3 d-flex"><i class="bi bi-geo-alt-fill me-3 mt-1 fs-5 text-danger"></i> <span>โรงเรียน/สถาบันของคุณ<br>จังหวัด, ประเทศไทย</span></li>
+                        <li class="mb-3 d-flex"><i class="bi bi-telephone-fill me-3 mt-1 fs-5 text-success"></i> <span>02-123-4567</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-secondary mb-3 mt-4">
+            
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light opacity-50 small">&copy; 2026 Micro Aqua Encyclopedia. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <a href="index.html" class="text-light opacity-50 small text-decoration-none me-3">นโยบายความเป็นส่วนตัว</a>
+                    <a href="index.html" class="text-light opacity-50 small text-decoration-none">เงื่อนไขการใช้งาน</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <!-- Modals for Articles -->
+    <div class="modal fade" id="modalArticle1" tabindex="-1" aria-labelledby="modalArticle1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalArticle1Label">รู้จักสัตว์น้ำจิ๋ว: สิ่งมีชีวิตจิ๋วที่มีความสำคัญต่อระบบนิเวศ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-3">
+                    <img src="รูป/หน้าเเรก01.png" class="img-fluid rounded-3 mb-4 w-100 object-fit-cover" style="max-height: 250px;" alt="รู้จักสัตว์น้ำจิ๋ว">
+                    <p class="text-dark lh-lg">
+                        สัตว์น้ำจิ๋ว (Micro aquatic organisms) หมายถึงสิ่งมีชีวิตขนาดเล็กที่อาศัยอยู่ในแหล่งน้ำ ซึ่งส่วนใหญ่ไม่สามารถมองเห็นรายละเอียดได้ด้วยตาเปล่า ต้องอาศัยกล้องจุลทรรศน์ในการศึกษา สิ่งมีชีวิตเหล่านี้มีความหลากหลายสูงมาก ทั้งในแง่ของสายพันธุ์ รูปร่าง และพฤติกรรม
+                    </p>
+                    <p class="text-dark lh-lg">
+                        ความสำคัญของสัตว์น้ำจิ๋วต่อระบบนิเวศนั้นมีมากมายมหาศาล พวกมันเป็น <strong>ผู้บริโภคอันดับแรกๆ</strong> ที่กินสาหร่ายเซลล์เดียวหรือแบคทีเรีย และในขณะเดียวกันก็เป็น <strong>อาหารสำคัญ</strong> ให้กับสัตว์น้ำที่ใหญ่กว่า เช่น ลูกปลาและกุ้ง การมีอยู่ของสัตว์น้ำจิ๋วจึงเป็นตัวชี้วัดความอุดมสมบูรณ์ของแหล่งน้ำนั้นๆ ได้เป็นอย่างดี
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalArticle2" tabindex="-1" aria-labelledby="modalArticle2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalArticle2Label">แหล่งที่อยู่อาศัยของสัตว์น้ำจิ๋ว</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-3">
+                    <img src="รูป/หน้าเเรก02.png" class="img-fluid rounded-3 mb-4 w-100 object-fit-cover" style="max-height: 250px;" alt="แหล่งที่อยู่อาศัยของสัตว์น้ำจิ๋ว">
+                    <p class="text-dark lh-lg">
+                        สัตว์น้ำจิ๋วสามารถพบได้ในแทบทุกแหล่งน้ำบนโลกใบนี้ แต่จะพบหนาแน่นที่สุดในบริเวณที่แสงแดดส่องถึงและมีสารอาหารอุดมสมบูรณ์ แหล่งที่อยู่อาศัยหลักๆ ได้แก่:
+                    </p>
+                    <ul class="text-dark lh-lg">
+                        <li><strong>แหล่งน้ำจืด (Freshwater):</strong> เช่น บึง ทะเลสาบ แม่น้ำ คูคลอง ซึ่งเป็นแหล่งที่มีความหลากหลายของสัตว์น้ำจิ๋วสูงมาก เช่น ไรน้ำ (Daphnia) และโรติเฟอร์</li>
+                        <li><strong>แหล่งน้ำกร่อย (Brackish water):</strong> บริเวณปากแม่น้ำที่น้ำจืดและน้ำเค็มมาบรรจบกัน มีสัตว์ที่ปรับตัวต่อความเค็มที่เปลี่ยนแปลงได้ เช่น โคพีพอดบางชนิด</li>
+                        <li><strong>ทะเลและมหาสมุทร (Marine):</strong> แหล่งอาศัยของแพลงก์ตอนสัตว์ทะเล ซึ่งเป็นรากฐานของห่วงโซ่อาหารในมหาสมุทร</li>
+                    </ul>
+                    <p class="text-dark lh-lg">
+                        ปัจจัยที่มีผลต่อการดำรงชีวิตของพวกมันรวมถึง อุณหภูมิ ปริมาณออกซิเจนละลายน้ำ (DO) ความเป็นกรด-ด่าง (pH) และปริมาณแสงอาทิตย์
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalArticle3" tabindex="-1" aria-labelledby="modalArticle3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalArticle3Label">การเพาะเลี้ยงสัตว์น้ำจิ๋วเบื้องต้น</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-3">
+                    <img src="รูป/หน้าเเรก03.png" class="img-fluid rounded-3 mb-4 w-100 object-fit-cover" style="max-height: 250px;" alt="การเพาะเลี้ยงสัตว์น้ำจิ๋ว">
+                    <p class="text-dark lh-lg">
+                        การเพาะเลี้ยงสัตว์น้ำจิ๋ว เช่น ไรแดง (Moina), ไรน้ำ (Daphnia) หรือ อาร์ทีเมีย (Artemia) เป็นทักษะที่สำคัญมากในวงการเพาะเลี้ยงสัตว์น้ำเศรษฐกิจ เนื่องจากลูกปลาหรือลูกกุ้งแรกเกิดต้องการอาหารที่มีชีวิตและมีขนาดเล็กพอที่จะกินได้
+                    </p>
+                    <p class="text-dark lh-lg">
+                        <strong>ขั้นตอนเบื้องต้น:</strong>
+                    </p>
+                    <ol class="text-dark lh-lg">
+                        <li><strong>การเตรียมน้ำ:</strong> ควรใช้น้ำจืดที่ปราศจากคลอรีน หรือน้ำเค็ม (สำหรับอาร์ทีเมีย) ที่มีความเค็มเหมาะสม</li>
+                        <li><strong>การเตรียมอาหาร:</strong> สัตว์น้ำจิ๋วเหล่านี้มักกินสาหร่ายเซลล์เดียว (เช่น Chlorella) หรือน้ำเขียวเป็นอาหาร หรือสามารถใช้อาหารเสริม เช่น ยีสต์ หรือรำละเอียดต้มสุก</li>
+                        <li><strong>การให้อากาศ:</strong> ควรมีระบบให้ออกซิเจนเบาๆ เพื่อไม่ให้น้ำเน่าเสียและช่วยพัดพาอาหารให้กระจายทั่วบ่อ</li>
+                        <li><strong>การเก็บเกี่ยว:</strong> เมื่อสัตว์น้ำจิ๋วขยายพันธุ์จนมีความหนาแน่นเหมาะสม สามารถใช้กระชอนตาถี่ช้อนขึ้นมาทำความสะอาดก่อนนำไปให้ลูกปลากิน</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalArticle4" tabindex="-1" aria-labelledby="modalArticle4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalArticle4Label">บทบาทของสัตว์น้ำจิ๋วในห่วงโซ่อาหาร</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-3">
+                    <img src="รูป/หน้าเเรก04.png" class="img-fluid rounded-3 mb-4 w-100 object-fit-cover" style="max-height: 250px;" alt="บทบาทในห่วงโซ่อาหาร">
+                    <p class="text-dark lh-lg">
+                        ในระบบนิเวศทางน้ำ สัตว์น้ำจิ๋วเปรียบเสมือน <strong>"ข้อต่อ"</strong> ที่สำคัญที่สุดที่เชื่อมโยงผู้ผลิต (แพลงก์ตอนพืช/สาหร่าย) เข้ากับผู้บริโภคลำดับที่สูงกว่า (ปลา, กุ้ง, และมนุษย์ในท้ายที่สุด)
+                    </p>
+                    <p class="text-dark lh-lg">
+                        หากไม่มีสัตว์น้ำจิ๋ว แพลงก์ตอนพืชอาจจะเจริญเติบโตมากเกินไปจนเกิดปรากฏการณ์ขี้ปลาวาฬ (Algal bloom) ทำให้น้ำขาดออกซิเจน ในขณะเดียวกัน ลูกปลาที่เพิ่งฟักออกจากไข่ก็จะไม่มีอาหารกินและตายลง ส่งผลให้ประชากรปลาลดลงอย่างรวดเร็ว
+                    </p>
+                    <p class="text-dark lh-lg">
+                        นอกจากนี้ สัตว์น้ำจิ๋วบางชนิดยังทำหน้าที่เป็นผู้ย่อยสลาย กินเศษซากอินทรียวัตถุในแหล่งน้ำ ช่วยทำให้น้ำสะอาดและหมุนเวียนแร่ธาตุกลับสู่ระบบนิเวศอีกด้วย
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalArticle5" tabindex="-1" aria-labelledby="modalArticle5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalArticle5Label">การใช้กล้องจุลทรรศน์ในการศึกษาสัตว์น้ำจิ๋ว</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-3">
+                    <img src="รูป/หน้าเเรก05.png" class="img-fluid rounded-3 mb-4 w-100 object-fit-cover" style="max-height: 250px;" alt="การใช้กล้องจุลทรรศน์">
+                    <p class="text-dark lh-lg">
+                        เนื่องจากสัตว์น้ำจิ๋วมีขนาดตั้งแต่ไม่กี่ไมครอนไปจนถึงไม่กี่มิลลิเมตร การศึกษาพวกมันจึงต้องอาศัยกล้องจุลทรรศน์ (Microscope)
+                    </p>
+                    <p class="text-dark lh-lg">
+                        <strong>เทคนิคพื้นฐาน:</strong>
+                    </p>
+                    <ul class="text-dark lh-lg">
+                        <li><strong>การเตรียมตัวอย่าง (Wet Mount):</strong> หยดน้ำตัวอย่างที่มีสัตว์น้ำจิ๋วลงบนสไลด์แก้ว แล้วปิดทับด้วยกระจกปิดสไลด์ (Cover slip) อย่างเบามือเพื่อไม่ให้สัตว์ถูกทับตาย</li>
+                        <li><strong>การชะลอการเคลื่อนที่:</strong> สัตว์บางชนิดเคลื่อนที่เร็วมาก อาจต้องใช้สารละลายหนืด (เช่น Methyl cellulose) หยดลงไปเล็กน้อยเพื่อชะลอความเร็วให้สังเกตได้ง่ายขึ้น</li>
+                        <li><strong>การปรับแสง:</strong> การหรี่แสง (Diaphragm) ให้แคบลงจะช่วยเพิ่มคอนทราสต์ (Contrast) ทำให้เห็นโครงสร้างภายในที่โปร่งใสของสัตว์น้ำจิ๋วได้ชัดเจนยิ่งขึ้น</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

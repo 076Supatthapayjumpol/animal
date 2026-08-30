@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สัตว์น้ำจิ๋ว | Tiny Aquatic Encyclopedia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav scrolled">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="รูป/logo.png" alt="Logo" class="me-2 nav-logo">
+                <div>
+                    <h1 class="h5 mb-0 fw-bold text-gradient">สารานุกรมสัตว์น้ำจิ๋ว</h1>
+                    <small class="text-muted d-block" style="font-size: 0.75rem;">Tiny Aquatic Encyclopedia</small>
+                </div>
+            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fw-medium">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="animals.html">สัตว์น้ำจิ๋ว</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">คลังภาพ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="articles.html">บทความรู้</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trivia.html">เกร็ดความรู้</a></li>
+                    <li class="nav-item"><a class="nav-link" href="importance.html">ความสำคัญ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container" style="margin-top: 120px;">
+        <!-- Breadcrumb & Search -->
+        <div class="row align-items-end mb-4">
+            <div class="col-md-7" data-aos="fade-right">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-2">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark fw-medium"><i class="bi bi-house-door-fill fs-5 me-1 align-text-bottom"></i> หน้าแรก</a></li>
+                        <li class="breadcrumb-item active fw-medium mt-1" aria-current="page">สัตว์น้ำจิ๋ว</li>
+                    </ol>
+                </nav>
+                <h2 class="fw-bold section-title mb-2 fs-1">สัตว์น้ำจิ๋ว</h2>
+                <p class="text-dark mb-0 fw-light">รวบรวมข้อมูลสัตว์น้ำจิ๋วหลากหลายชนิด ทั้งโปรโตซัว แพลงก์ตอนสัตว์ และครัสเตเชียนขนาดเล็ก</p>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-left">
+                <div class="input-group shadow-sm rounded-pill overflow-hidden border bg-white p-1">
+                    <input type="text" id="searchInput" class="form-control border-0 px-4 bg-transparent" style="box-shadow: none;" placeholder="ค้นหาสัตว์น้ำจิ๋ว...">
+                    <button class="btn btn-dark rounded-pill px-4" type="button"><i class="bi bi-search me-1"></i> ค้นหา</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Box -->
+        <div class="filter-box bg-white p-4 rounded-4 mb-4" data-aos="fade-up">
+            <div class="row g-4 align-items-end">
+                <div class="col-md-3">
+                    <label class="form-label small text-muted mb-2 fw-medium">ประเภทสัตว์</label>
+                    <select id="filterType" class="form-select rounded-pill ps-3 pe-4 text-muted">
+                        <option value="ทั้งหมด" selected>ทั้งหมด</option>
+                        <option value="แพลงก์ตอนสัตว์">แพลงก์ตอนสัตว์</option>
+                        <option value="ครัสเตเชียนขนาดเล็ก">ครัสเตเชียนขนาดเล็ก</option>
+                        <option value="โปรโตซัว">โปรโตซัว</option>
+                        <option value="สาหร่ายเซลล์เดียว">สาหร่ายเซลล์เดียว</option>
+                        <option value="สาหร่ายเส้นสาย">สาหร่ายเส้นสาย</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label small text-muted mb-2 fw-medium">แหล่งที่อยู่อาศัย</label>
+                    <select class="form-select rounded-pill ps-3 pe-4 text-muted">
+                        <option selected>ทั้งหมด</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label small text-muted mb-2 fw-medium">ขนาด</label>
+                    <select id="filterSize" class="form-select rounded-pill ps-3 pe-4 text-muted">
+                        <option value="ทั้งหมด" selected>ทั้งหมด</option>
+                        <option value="10-100 ไมครอน">10-100 ไมครอน</option>
+                        <option value="0.05-0.1 มม.">0.05-0.1 มม.</option>
+                        <option value="0.1-0.5 มม.">0.1-0.5 มม.</option>
+                        <option value="0.2-0.3 มม.">0.2-0.3 มม.</option>
+                        <option value="0.2-1 มม.">0.2-1 มม.</option>
+                        <option value="0.5-1.5 มม.">0.5-1.5 มม.</option>
+                        <option value="0.5-2 มม.">0.5-2 มม.</option>
+                        <option value="1-5 มม.">1-5 มม.</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label small text-muted mb-2 fw-medium">การพบเห็น</label>
+                    <select class="form-select rounded-pill ps-3 pe-4 text-muted">
+                        <option selected>ทั้งหมด</option>
+                    </select>
+                </div>
+                <div class="col-md-1 text-center">
+                    <button id="clearFiltersBtn" class="btn btn-outline-dark rounded-pill btn-sm py-2 px-3 w-100" title="ล้างตัวกรอง">
+                        ล้างตัวกรอง <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <p id="resultCount" class="text-muted small mb-4 fw-medium" data-aos="fade-up">พบทั้งหมด 24 ชนิด</p>
+
+        <!-- Grid of Animals -->
+        <div id="animalGrid" class="row g-4 mb-5">
+            <!-- Animal 1 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="50">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 15.png" alt="Daphnia" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Daphnia</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">แพลงก์ตอนสัตว์</div>
+                            <div class="text-muted">ขนาด: 1-5 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalDaphnia" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Animal 2 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="100">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 16.png" alt="Rotifer" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Rotifer</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">แพลงก์ตอนสัตว์</div>
+                            <div class="text-muted">ขนาด: 0.1-0.5 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalRotifer" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animal 3 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="150">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 17.png" alt="Cyclops" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Cyclops</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">ครัสเตเชียนขนาดเล็ก</div>
+                            <div class="text-muted">ขนาด: 0.5-2 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalCyclops" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animal 4 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="200">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 18.png" alt="Paramecium" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Paramecium</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">โปรโตซัว</div>
+                            <div class="text-muted">ขนาด: 0.2-0.3 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalParamecium" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animal 5 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="250">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 19.png" alt="Euglena" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Euglena</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">โปรโตซัว</div>
+                            <div class="text-muted">ขนาด: 0.05-0.1 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalEuglena" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animal 6 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="50">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 36.png" alt="Volvox" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Volvox</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">สาหร่ายเซลล์เดียว</div>
+                            <div class="text-muted">ขนาด: 0.5-2 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalVolvox" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animal 7 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="100">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 37.png" alt="Amoeba" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Amoeba</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">โปรโตซัว</div>
+                            <div class="text-muted">ขนาด: 0.2-1 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalAmoeba" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animal 8 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="150">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 38.png" alt="Moina" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Moina</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">แพลงก์ตอนสัตว์</div>
+                            <div class="text-muted">ขนาด: 0.5-1.5 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalMoina" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animal 9 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="200">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 39.png" alt="Nauplius" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Nauplius</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">ครัสเตเชียนขนาดเล็ก</div>
+                            <div class="text-muted">ขนาด: 0.2-0.3 มม.</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalNauplius" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animal 10 -->
+            <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="250">
+                <div class="card animal-list-card rounded-4 h-100 overflow-hidden bg-white">
+                    <div class="card-img-top overflow-hidden bg-dark">
+                        <img src="หน้าสอง/Rectangle 40.png" alt="Spirogyra" class="img-fluid w-100 object-fit-cover" style="height: 160px;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h6 class="fw-bold text-primary mb-2">Spirogyra</h6>
+                        <div class="text-dark small mb-3 lh-lg">
+                            <div class="fw-medium">สาหร่ายเส้นสาย</div>
+                            <div class="text-muted">ขนาด: 10-100 ไมครอน</div>
+                        </div>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalSpirogyra" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-auto detail-btn">รายละเอียด &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mb-5 pb-4" data-aos="fade-up">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-white shadow-sm fw-bold" href="index.html">&lt;</a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link text-white rounded-circle me-1 border-0 bg-dark shadow-sm" href="index.html">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-white shadow-sm" href="index.html">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-white shadow-sm" href="index.html">3</a>
+                </li>
+                <li class="page-item disabled">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-transparent fw-bold" href="index.html">...</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link text-dark rounded-circle me-1 border-0 bg-white shadow-sm" href="index.html">5</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link text-dark rounded-circle border-0 bg-white shadow-sm fw-bold" href="index.html">&gt;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="รูป/logo.png" alt="Logo" class="me-3 footer-logo">
+                        <div>
+                            <h4 class="text-white mb-0 fw-bold">สารานุกรมสัตว์น้ำจิ๋ว</h4>
+                            <small class="text-light opacity-75">Tiny Aquatic Encyclopedia</small>
+                        </div>
+                    </div>
+                    <p class="text-light opacity-75 small pe-lg-4">สำรวจโลกของสัตว์น้ำจิ๋วผ่านข้อมูล ภาพถ่าย และบทความความรู้จากกล้องจุลทรรศน์ เพื่อเป็นแหล่งเรียนรู้ทางชีววิทยาและนิเวศวิทยา</p>
+                    <div class="d-flex gap-2 social-links mt-3">
+                        <a href="https://facebook.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">หมวดหมู่</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="animals.html"><i class="bi bi-chevron-right me-1 small"></i> สัตว์น้ำจิ๋ว</a></li>
+                        <li><a href="gallery.html"><i class="bi bi-chevron-right me-1 small"></i> คลังภาพ</a></li>
+                        <li><a href="articles.html"><i class="bi bi-chevron-right me-1 small"></i> บทความรู้</a></li>
+                        <li><a href="trivia.html"><i class="bi bi-chevron-right me-1 small"></i> เกร็ดความรู้</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">ลิงก์ที่เกี่ยวข้อง</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="importance.html"><i class="bi bi-chevron-right me-1 small"></i> ความสำคัญในระบบนิเวศ</a></li>
+                        <li><a href="index.html#recommended"><i class="bi bi-chevron-right me-1 small"></i> สัตว์น้ำจิ๋วแนะนำ</a></li>
+                        <li><a href="index.html#news"><i class="bi bi-chevron-right me-1 small"></i> ข่าวสารและกิจกรรม</a></li>
+                        <li><a href="index.html"><i class="bi bi-chevron-right me-1 small"></i> กลับสู่หน้าแรก</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">ติดต่อเรา</h5>
+                    <ul class="list-unstyled text-light opacity-75 small contact-info">
+                        <li class="mb-3 d-flex"><i class="bi bi-envelope-fill me-3 mt-1 fs-5 text-info"></i> <span>microaqua@example.com</span></li>
+                        <li class="mb-3 d-flex"><i class="bi bi-geo-alt-fill me-3 mt-1 fs-5 text-danger"></i> <span>โรงเรียน/สถาบันของคุณ<br>จังหวัด, ประเทศไทย</span></li>
+                        <li class="mb-3 d-flex"><i class="bi bi-telephone-fill me-3 mt-1 fs-5 text-success"></i> <span>02-123-4567</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-secondary mb-3 mt-4">
+            
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light opacity-50 small">&copy; 2026 Micro Aqua Encyclopedia. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <a href="index.html" class="text-light opacity-50 small text-decoration-none me-3">นโยบายความเป็นส่วนตัว</a>
+                    <a href="index.html" class="text-light opacity-50 small text-decoration-none">เงื่อนไขการใช้งาน</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <!-- Modals for Animals -->
+    <div class="modal fade" id="modalDaphnia" tabindex="-1" aria-labelledby="modalDaphniaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalDaphniaLabel">Daphnia (ไรน้ำ)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 15.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Daphnia" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Daphnia หรือไรน้ำ เป็นแพลงก์ตอนสัตว์ที่อาศัยอยู่ในแหล่งน้ำจืด มีบทบาทสำคัญในห่วงโซ่อาหารโดยเป็นผู้บริโภคสาหร่ายและเป็นอาหารของปลาขนาดเล็ก มีลำตัวโปร่งใสและหนวดที่ใช้ในการว่ายน้ำ
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">แพลงก์ตอนสัตว์</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">แหล่งน้ำจืด</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRotifer" tabindex="-1" aria-labelledby="modalRotiferLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalRotiferLabel">Rotifer (โรติเฟอร์)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 16.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Rotifer" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Rotifer เป็นสัตว์ขนาดเล็กที่มีโครงสร้างซับซ้อน มีอวัยวะคล้ายล้อหมุนที่หัวสำหรับพัดอาหารเข้าปาก มักพบในแหล่งน้ำจืดทั่วโลก และทนต่อสภาวะแห้งแล้งได้ดีเยี่ยม
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">แพลงก์ตอนสัตว์</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">แหล่งน้ำจืด</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCyclops" tabindex="-1" aria-labelledby="modalCyclopsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalCyclopsLabel">Cyclops</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 17.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Cyclops" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Cyclops เป็นสัตว์กลุ่มครัสเตเชียนขนาดเล็ก มีตาเดียวตรงกลางหัว เป็นนักล่าตัวยงในระดับไมโคร และเป็นแหล่งอาหารชั้นดีสำหรับปลาเศรษฐกิจหลายชนิด
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">ครัสเตเชียน</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">นักล่าขนาดเล็ก</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalParamecium" tabindex="-1" aria-labelledby="modalParameciumLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalParameciumLabel">Paramecium (พารามีเซียม)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 18.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Paramecium" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Paramecium เป็นสิ่งมีชีวิตเซลล์เดียวขนาดเล็ก จัดอยู่ในกลุ่มโปรโตซัว มีรูปร่างคล้ายรองเท้าแตะ เคลื่อนที่โดยใช้ขนสั้นๆ ที่เรียกว่า ซีเลีย (Cilia) โบกพัด มักพบในแหล่งน้ำจืดที่ค่อนข้างนิ่งและมีอินทรียวัตถุเน่าเปื่อย
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">โปรโตซัว</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">น้ำจืด</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEuglena" tabindex="-1" aria-labelledby="modalEuglenaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalEuglenaLabel">Euglena (ยูกลีนา)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 19.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Euglena" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Euglena เป็นสิ่งมีชีวิตเซลล์เดียวที่มีลักษณะก้ำกึ่งระหว่างพืชและสัตว์ คือสามารถสังเคราะห์ด้วยแสงได้เหมือนพืช (มีคลอโรพลาสต์) แต่ก็สามารถเคลื่อนที่และกินอาหารได้เหมือนสัตว์โดยใช้ แฟลเจลลัม (Flagellum)
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">โปรโตซัว</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">สังเคราะห์แสงได้</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalVolvox" tabindex="-1" aria-labelledby="modalVolvoxLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalVolvoxLabel">Volvox (วอลวอกซ์)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 36.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Volvox" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Volvox เป็นสาหร่ายสีเขียวเซลล์เดียวที่อาศัยอยู่รวมกันเป็นโคโลนี (Colony) ทรงกลม สามารถมองเห็นได้ด้วยตาเปล่าคล้ายจุดฝุ่นสีเขียวกลิ้งไปมาในน้ำ เป็นตัวอย่างที่ดีของการวิวัฒนาการจากสิ่งมีชีวิตเซลล์เดียวไปสู่หลายเซลล์
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">สาหร่ายเซลล์เดียว</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">โคโลนี</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAmoeba" tabindex="-1" aria-labelledby="modalAmoebaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalAmoebaLabel">Amoeba (อะมีบา)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 37.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Amoeba" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Amoeba เป็นโปรโตซัวที่มีรูปร่างไม่แน่นอน เคลื่อนที่และจับอาหารโดยการยื่น เท้าเทียม (Pseudopodium) ออกมาโอบล้อมเหยื่อ พบได้ทั่วไปในแหล่งน้ำจืด ดินชื้น และบางชนิดเป็นปรสิตที่ก่อโรคในมนุษย์
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">โปรโตซัว</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">เท้าเทียม</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMoina" tabindex="-1" aria-labelledby="modalMoinaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalMoinaLabel">Moina (ไรแดง)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 38.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Moina" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Moina หรือ ไรแดง เป็นแพลงก์ตอนสัตว์น้ำจืดขนาดเล็ก มีคุณค่าทางอาหารสูงมาก นิยมนำมาเพาะเลี้ยงเพื่อใช้เป็นอาหารอนุบาลลูกปลาและสัตว์น้ำวัยอ่อนในอุตสาหกรรมเพาะเลี้ยงสัตว์น้ำ
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">แพลงก์ตอนสัตว์</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">อาหารปลา</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalNauplius" tabindex="-1" aria-labelledby="modalNaupliusLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalNaupliusLabel">Nauplius (นอเพลียส)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 39.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Nauplius" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Nauplius เป็นระยะตัวอ่อนแรกสุดของสัตว์ในกลุ่มครัสเตเชียน (เช่น กุ้ง ปู เพรียง) มีตาเดียวตรงกลางหน้าผากและมีรยางค์ 3 คู่ใช้สำหรับว่ายน้ำ เป็นแหล่งอาหารที่สำคัญมากในระบบนิเวศทางทะเลและน้ำจืด
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">ตัวอ่อนครัสเตเชียน</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">ระยะแรกเกิด</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSpirogyra" tabindex="-1" aria-labelledby="modalSpirogyraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="modalSpirogyraLabel">Spirogyra (เทาน้ำ)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img src="หน้าสอง/Rectangle 40.png" class="img-fluid rounded-3 shadow-sm w-100 object-fit-cover" alt="Spirogyra" style="max-height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2">ข้อมูลรายละเอียด</h6>
+                            <p class="text-muted lh-lg" style="font-size: 0.95rem;">
+                                Spirogyra หรือ สาหร่ายเทาน้ำ เป็นสาหร่ายสีเขียวที่มีลักษณะเป็นเส้นสายยาว จุดเด่นคือมีคลอโรพลาสต์เรียงตัวเป็นเกลียวสว่านอยู่ภายในเซลล์ มักลอยเป็นแพอยู่ผิวน้ำในแหล่งน้ำจืดที่สะอาด
+                            </p>
+                            <div class="mt-4 pt-3 border-top">
+                                <span class="badge bg-light text-dark border px-3 py-2 me-2">สาหร่ายเส้นสาย</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">สังเคราะห์แสง</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สารานุกรมสัตว์น้ำจิ๋ว | Tiny Aquatic Encyclopedia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="รูป/logo.png" alt="Logo" class="me-2 nav-logo">
+                <div>
+                    <h1 class="h5 mb-0 fw-bold text-gradient">สารานุกรมสัตว์น้ำจิ๋ว</h1>
+                    <small class="text-muted d-block" style="font-size: 0.75rem;">Tiny Aquatic Encyclopedia</small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fw-medium">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="animals.html">สัตว์น้ำจิ๋ว</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">คลังภาพ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="articles.html">บทความรู้</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trivia.html">เกร็ดความรู้</a></li>
+                    <li class="nav-item"><a class="nav-link" href="importance.html">ความสำคัญ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-banner-section">
+        <div class="container-fluid p-0">
+            <img src="รูป/banner.svg" alt="สารานุกรมสัตว์น้ำจิ๋ว" class="w-100 img-fluid hero-banner-img" data-aos="fade-in" data-aos-duration="1200">
+        </div>
+    </section>
+
+    <!-- Explore Content Section -->
+    <section class="explore-section py-5 bg-light-blue">
+        <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold section-title">สำรวจเนื้อหา</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="explore-card glass-card text-center p-3 p-md-4 h-100 shadow-sm rounded-4 hover-up" onclick="window.location.href='animals.html';" style="cursor: pointer;">
+                        <div class="icon-box gradient-1 shadow mb-3 mx-auto">
+                            <i class="bi bi-bug-fill text-white fs-3"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">สัตว์น้ำจิ๋ว</h6>
+                        <small class="text-muted">ข้อมูลสัตว์น้ำจิ๋วแต่ละชนิด</small>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="explore-card glass-card text-center p-3 p-md-4 h-100 shadow-sm rounded-4 hover-up" onclick="window.location.href='gallery.html';" style="cursor: pointer;">
+                        <div class="icon-box gradient-2 shadow mb-3 mx-auto">
+                            <i class="bi bi-images text-white fs-3"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">คลังภาพ</h6>
+                        <small class="text-muted">รวมภาพถ่ายจากกล้องจุลทรรศน์</small>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="explore-card glass-card text-center p-3 p-md-4 h-100 shadow-sm rounded-4 hover-up" onclick="window.location.href='articles.html';" style="cursor: pointer;">
+                        <div class="icon-box gradient-3 shadow mb-3 mx-auto">
+                            <i class="bi bi-book-half text-white fs-3"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">บทความรู้</h6>
+                        <small class="text-muted">บทความและความรู้ที่เกี่ยวข้อง</small>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="explore-card glass-card text-center p-3 p-md-4 h-100 shadow-sm rounded-4 hover-up" onclick="window.location.href='trivia.html';" style="cursor: pointer;">
+                        <div class="icon-box gradient-4 shadow mb-3 mx-auto">
+                            <i class="bi bi-lightbulb-fill text-white fs-3"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">เกร็ดความรู้</h6>
+                        <small class="text-muted">ข้อเท็จจริงน่ารู้เกี่ยวกับสัตว์น้ำ</small>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="explore-card glass-card text-center p-3 p-md-4 h-100 shadow-sm rounded-4 hover-up" onclick="window.location.href='importance.html';" style="cursor: pointer;">
+                        <div class="icon-box gradient-5 shadow mb-3 mx-auto">
+                            <i class="bi bi-shield-fill-check text-white fs-3"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">ความสำคัญ</h6>
+                        <small class="text-muted">ร่วมกันดูแลและอนุรักษ์</small>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+                    <div class="explore-card glass-card text-center p-3 p-md-4 h-100 shadow-sm rounded-4 hover-up">
+                        <div class="icon-box gradient-6 shadow mb-3 mx-auto">
+                            <i class="bi bi-info-circle-fill text-white fs-3"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">เกี่ยวกับเว็บไซต์</h6>
+                        <small class="text-muted">วัตถุประสงค์และผู้จัดทำ</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Animals Section -->
+    <section id="recommended" class="recommended-section py-5">
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-end mb-4" data-aos="fade-up">
+                <div>
+                    <h2 class="fw-bold section-title mb-0"><i class="bi bi-stars text-warning me-2"></i>สัตว์น้ำจิ๋วแนะนำ</h2>
+                </div>
+                <a href="animals.html" class="btn btn-outline-primary rounded-pill btn-sm px-3 shadow-sm hover-lift">ดูทั้งหมด <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Animal Card 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="100">
+                    <div class="animal-card card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+                        <div class="card-img-top position-relative overflow-hidden">
+                            <img src="รูป/หน้าเเรก01.png" alt="Daphnia" class="img-fluid w-100 object-fit-cover" style="height: 180px;">
+                            <div class="card-overlay">
+                                <a href="animals.html" class="btn btn-light rounded-circle btn-icon shadow"><i class="bi bi-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Daphnia</h5>
+                            <p class="card-text text-muted small">ไรน้ำ หรือ ไรแดง เป็นครัสเตเชียนขนาดเล็ก พบได้ในแหล่งน้ำจืดทั่วไป</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animal Card 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="200">
+                    <div class="animal-card card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+                        <div class="card-img-top position-relative overflow-hidden">
+                            <img src="รูป/หน้าเเรก02.png" alt="Rotifer" class="img-fluid w-100 object-fit-cover" style="height: 180px;">
+                            <div class="card-overlay">
+                                <a href="animals.html" class="btn btn-light rounded-circle btn-icon shadow"><i class="bi bi-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Rotifer</h5>
+                            <p class="card-text text-muted small">โรติเฟอร์ เป็นสัตว์น้ำขนาดเล็กมาก มีอวัยวะคล้ายล้อหมุนที่บริเวณหัว</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animal Card 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="300">
+                    <div class="animal-card card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+                        <div class="card-img-top position-relative overflow-hidden">
+                            <img src="รูป/หน้าเเรก03.png" alt="Cyclops" class="img-fluid w-100 object-fit-cover" style="height: 180px;">
+                            <div class="card-overlay">
+                                <a href="animals.html" class="btn btn-light rounded-circle btn-icon shadow"><i class="bi bi-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Cyclops</h5>
+                            <p class="card-text text-muted small">ไซคลอปส์ โคพีพอดชนิดหนึ่ง มีตาเดียวตรงกลางหัว อาศัยในแหล่งน้ำจืด</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animal Card 4 -->
+                <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="400">
+                    <div class="animal-card card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+                        <div class="card-img-top position-relative overflow-hidden">
+                            <img src="รูป/หน้าเเรก04.png" alt="Paramecium" class="img-fluid w-100 object-fit-cover" style="height: 180px;">
+                            <div class="card-overlay">
+                                <a href="animals.html" class="btn btn-light rounded-circle btn-icon shadow"><i class="bi bi-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Paramecium</h5>
+                            <p class="card-text text-muted small">พารามีเซียม โปรโตซัวเซลล์เดียว มีขนรอบตัว เคลื่อนที่ได้อย่างรวดเร็ว</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animal Card 5 -->
+                <div class="col-sm-6 col-md-4 col-lg-5ths" data-aos="fade-up" data-aos-delay="500">
+                    <div class="animal-card card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+                        <div class="card-img-top position-relative overflow-hidden">
+                            <img src="รูป/หน้าเเรก05.png" alt="Euglena" class="img-fluid w-100 object-fit-cover" style="height: 180px;">
+                            <div class="card-overlay">
+                                <a href="animals.html" class="btn btn-light rounded-circle btn-icon shadow"><i class="bi bi-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Euglena</h5>
+                            <p class="card-text text-muted small">ยูกลีนา สิ่งมีชีวิตเซลล์เดียว มีคลอโรพลาสต์ สามารถสังเคราะห์แสงได้</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News and Events Banner -->
+    <section id="news" class="news-section py-4">
+        <div class="container">
+            <div class="news-banner glass-card rounded-4 p-4 shadow-sm position-relative overflow-hidden" data-aos="zoom-in">
+                <div class="blob-shape"></div>
+                <div class="row align-items-center position-relative z-1">
+                    <div class="col-md-3 border-end border-light-subtle text-center text-md-start mb-3 mb-md-0">
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="bi bi-megaphone-fill fs-2 text-primary me-3 beat-animation"></i>
+                            <h4 class="fw-bold mb-0 text-dark">ข่าวสารและกิจกรรม</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="news-item">
+                                    <span class="badge bg-danger-subtle text-danger mb-2">บทความใหม่</span>
+                                    <h6 class="fw-bold mb-1">เทคนิคการส่องสัตว์น้ำจิ๋วด้วยกล้องจุลทรรศน์</h6>
+                                    <small class="text-muted"><i class="bi bi-calendar3 me-1"></i> 15 พ.ค. 2567</small>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="news-item">
+                                    <span class="badge bg-success-subtle text-success mb-2">เกร็ดความรู้ใหม่</span>
+                                    <h6 class="fw-bold mb-1">สัตว์น้ำจิ๋วผู้ซ่อนตัวใต้ผิวน้ำ</h6>
+                                    <small class="text-muted"><i class="bi bi-calendar3 me-1"></i> 10 พ.ค. 2567</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center text-md-end mt-3 mt-md-0">
+                        <a href="articles.html" class="btn btn-outline-dark rounded-pill shadow-sm hover-lift">ดูทั้งหมด <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="รูป/logo.png" alt="Logo" class="me-3 footer-logo">
+                        <div>
+                            <h4 class="text-white mb-0 fw-bold">สารานุกรมสัตว์น้ำจิ๋ว</h4>
+                            <small class="text-light opacity-75">Tiny Aquatic Encyclopedia</small>
+                        </div>
+                    </div>
+                    <p class="text-light opacity-75 small pe-lg-4">สำรวจโลกของสัตว์น้ำจิ๋วผ่านข้อมูล ภาพถ่าย และบทความความรู้จากกล้องจุลทรรศน์ เพื่อเป็นแหล่งเรียนรู้ทางชีววิทยาและนิเวศวิทยา</p>
+                    <div class="d-flex gap-2 social-links mt-3">
+                        <a href="https://facebook.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="btn btn-sm btn-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">หมวดหมู่</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="animals.html"><i class="bi bi-chevron-right me-1 small"></i> สัตว์น้ำจิ๋ว</a></li>
+                        <li><a href="gallery.html"><i class="bi bi-chevron-right me-1 small"></i> คลังภาพ</a></li>
+                        <li><a href="articles.html"><i class="bi bi-chevron-right me-1 small"></i> บทความรู้</a></li>
+                        <li><a href="trivia.html"><i class="bi bi-chevron-right me-1 small"></i> เกร็ดความรู้</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">ลิงก์ที่เกี่ยวข้อง</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="importance.html"><i class="bi bi-chevron-right me-1 small"></i> ความสำคัญในระบบนิเวศ</a></li>
+                        <li><a href="index.html#recommended"><i class="bi bi-chevron-right me-1 small"></i> สัตว์น้ำจิ๋วแนะนำ</a></li>
+                        <li><a href="index.html#news"><i class="bi bi-chevron-right me-1 small"></i> ข่าวสารและกิจกรรม</a></li>
+                        <li><a href="index.html"><i class="bi bi-chevron-right me-1 small"></i> กลับสู่หน้าแรก</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4 fw-bold position-relative footer-title">ติดต่อเรา</h5>
+                    <ul class="list-unstyled text-light opacity-75 small contact-info">
+                        <li class="mb-3 d-flex"><i class="bi bi-envelope-fill me-3 mt-1 fs-5 text-info"></i> <span>microaqua@example.com</span></li>
+                        <li class="mb-3 d-flex"><i class="bi bi-geo-alt-fill me-3 mt-1 fs-5 text-danger"></i> <span>โรงเรียน/สถาบันของคุณ<br>จังหวัด, ประเทศไทย</span></li>
+                        <li class="mb-3 d-flex"><i class="bi bi-telephone-fill me-3 mt-1 fs-5 text-success"></i> <span>02-123-4567</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-secondary mb-3 mt-4">
+            
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light opacity-50 small">&copy; 2026 Micro Aqua Encyclopedia. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <a href="index.html" class="text-light opacity-50 small text-decoration-none me-3">นโยบายความเป็นส่วนตัว</a>
+                    <a href="index.html" class="text-light opacity-50 small text-decoration-none">เงื่อนไขการใช้งาน</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
