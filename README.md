@@ -4,7 +4,7 @@
 
 ## 📌 ข้อมูลโครงงาน (Project Info)
 - **ชื่อโครงการ:** สารานุกรมสัตว์น้ำจิ๋ว (เว็บไซต์รวบรวมข้อมูลและความรู้เกี่ยวกับสัตว์น้ำขนาดเล็ก)
-- **Live Website:** `https://076Supatthapayjumpol.github.io/animal/`
+- **Live Website:** `[https://076Supatthapayjumpol.github.io/animal/](https://076supatthapayjumpol.github.io/animal/)`
 - **Figma Design:** [ดูแบบใน Figma](https://www.figma.com/design/AOOxMaQC885gruAmRvWSFn/animals?node-id=0-1&t=LtBgZLM7T7Pmd7Yh-1)
 
 ## 🎯 วัตถุประสงค์ (Project Objectives)
